@@ -42,7 +42,7 @@ languageSelector.addEventListener("change", () => {
   quote.textContent = translations[selected] || translations["tr"];
 
   audio.src = `audio/${selected}.mp3`;
-  audio.loop = true;      // Döngüyü garanti altına al
+  audio.loop = true;      
   audio.play();
 
   video.currentTime = 0;
@@ -50,12 +50,13 @@ languageSelector.addEventListener("change", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-  video.volume = 0;        // Video sesi kapalı
-  video.muted = true;      // Muted açık
-  video.loop = true;       // Video döngüde
+  video.volume = 0;        
+  video.muted = true;      
+  video.loop = true;       
   video.play();
 
   audio.src = "audio/tr.mp3";
-  audio.loop = true;       // Ses döngüde
+  audio.loop = true;       
   audio.play();
 });
+
